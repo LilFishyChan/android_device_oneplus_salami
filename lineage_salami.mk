@@ -14,6 +14,8 @@ $(call inherit-product, device/oneplus/salami/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+$(call inherit-product, device/oneplus/salami/avium-common.mk)
+
 PRODUCT_NAME := lineage_salami
 PRODUCT_DEVICE := salami
 PRODUCT_MANUFACTURER := OnePlus
