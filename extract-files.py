@@ -19,6 +19,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'hardware/oplus',
+    'hardware/pixelworks/interfaces',
     'hardware/qcom-caf/sm8550',
     'vendor/oneplus/sm8550-common',
     'vendor/qcom/opensource/display',
@@ -48,7 +49,7 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('(NXPLOG_.*_LOGLEVEL)=0x03', '\\1=0x02')
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'odm/lib64/libAlgoProcess.so': blob_fixup()
-        .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V6-ndk.so'),
+        .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
     (
         'odm/lib64/libCOppLceTonemapAPI.so',
         'odm/lib64/libCS.so',
@@ -74,6 +75,11 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('remote_register_buf'),
     'odm/lib64/libextensionlayer.so': blob_fixup()
         .replace_needed('libziparchive.so', 'libziparchive_odm.so'),
+    (
+        'vendor/bin/hw/vendor.qti.camera.provider-service_64',
+        'vendor/lib64/camx.provider-impl.so',
+    ): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0')
 }  # fmt: skip
