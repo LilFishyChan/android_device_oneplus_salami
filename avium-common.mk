@@ -1,5 +1,9 @@
-AVIUM_BUILDTYPE := Unoffical
+AVIUM_BUILDTYPE := Unofficial
 AVIUM_VERSION_APPEND_TIME_OF_DAY := false
+
+# 此信息将显示在"设置"->"关于手机"中
+AVIUM_SETTINGS_SOC_MODEL_NAME := Snapdragon 8 Gen 2
+AVIUM_SETTINGS_DEVICE_CODENAME := salami
 
 # GMS
 WITH_GMS ?= true
@@ -12,5 +16,5 @@ TARGET_GMS_TYPE ?= MINI
 TARGET_INCLUDE_GOOGLEIME ?= true
 TARGET_GOOGLEIME_OVERRIDE_IME ?= true
 
-# 此信息将显示在“设置”->“关于手机”中
+# Maintainer
 AVIUM_MAINTAINER := LilFishyChan
