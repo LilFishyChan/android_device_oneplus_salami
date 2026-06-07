@@ -60,6 +60,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# OTA verification keys (custom sign key)
+PRODUCT_EXTRA_OTA_KEYS += device/oneplus/salami/keys/releasekey
+
 # Telephony
 PRODUCT_PACKAGES += \
     OplusEsimSwitcher \
