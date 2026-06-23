@@ -77,3 +77,8 @@ $(call inherit-product, device/oneplus/sm8550-common/common.mk)
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/salami/salami-vendor.mk)
+
+# Force Chinese variant (PHB110) props, ODM partition overrides Indian CPH2447
+PRODUCT_ODM_PROPERTIES += \
+    ro.product.odm.model=PHB110 \
+    ro.product.odm.name=PHB110
