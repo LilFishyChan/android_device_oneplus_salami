@@ -1,6 +1,0 @@
-runtime_resource_overlay {
-    name: "DeviceKeyHandlerOverlay",
-    resource_dirs: ["res"],
-    manifest: "AndroidManifest.xml",
-    product_specific: true,
-}
