@@ -36,6 +36,7 @@ PRODUCT_PACKAGES += \
     FrameworksResEuicc_EU \
     FrameworksResEuicc_NA \
     KeyHandlerResTarget \
+    DeviceKeyHandlerOverlay \
     OPlusFrameworksResTarget \
     OPlusSettingsProviderResTarget \
     OPlusSettingsResTarget \
